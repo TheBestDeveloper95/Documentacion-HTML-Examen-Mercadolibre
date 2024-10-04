@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen de Mercadolibre</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f5;
+            margin: 1000;
+            padding: 0;
+            color: #333;
+        }
+
+        #content {
+            width: 38%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        header h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #222527;
+        }
+
+
+        /* Image Styling */
+        img {
+            display: block;
+            margin: 30px auto;
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Content Typography */
+        h2 {
+            font-size: 1.8em;
+            margin-top: 40px;
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 40px;
+            margin-bottom: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Social Media Icon */
+        .socialMedia {
+            text-align: left;
+            margin: -28px 0px 0px -93%;
+        }
+
+        .socialMedia a img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s;
+        }
+
+        .socialMedia a img:hover {
+            transform: scale(1.9);
+        }
+                        /* Social Media Icon */
+        .yooo {
+            text-align: left;
+            margin: -28px 0px 0px 0%;
+        }
+
+        .yooo img {
+
+            transition: transform 0.25s;
+        }
+
+        .yooo a img:hover {
+            transform: scale(1.27);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            #content {
+                width: 95%;
+            }
+
+            .infobox {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <h1>Como afronté el Examen de Mercadolibre</h1>
+        </header>
+        
+
+        <div class="yooo">
+            <a href="https://github.com/TheBestDeveloper95/Examen-Parcial-Mercadolibre" target="_blank"> <br><br>
+                 <img src="imagenes/yo.png" alt="Instagram">
+             </a>
+
+        </div>
+
+
+             <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*OSif7HJSmrpCZ-IKVQY7SQ.png" width="550px">
+             <br>
+         <h2>Introducción</h2>
+        <p>El<strong> desafío</strong> consistia en que dado como parametro un array de Stings que representan una tabla<br> 
+            de (NxN) con la secuencia de ADN, donde las letras de los Strings solo podian ser (A,T,C,G), las <br>
+            cuales representan cada base nitrogenada del ADN. Detectar Mutantes encontrando cadenas de <br> 4 letras iguales.</p>
+
+        <h2>Planteo de la algoritmos y objetivos</h2>
+
+        <div>
+            <img src="imagenes/Sin título.png" width="800px"   >
+        </div>           
+
+        <p>En general para resolver eficientemente un algoritmo complejo hay 3 factores determinantes que <br> determinan si un programa es bueno o no:</p>
+        <ul>
+            <li><strong>Bucles:</strong> Tener cuidado con los bucles (y bucles dentro de bucles).</li>
+            <li><strong>Tiempo de acceso:</strong> Considerar costoso el acceso a recursos (principalmente a disco y red).</li>
+            <li><strong>Servicios:</strong> Cuidar con cuales y cuantos servicios interactuamos.</li>
+        </ul>
+        <p>Otros<strong> aspectos</strong> a tener en cuenta aunque el problema parezca sencillo de resolver podrian ser:<br>
+            <ul>
+                <li>Considerar una matriz gigante.</li>
+                <li>Considerar matrices chicas pero procesando datos de miles de personas. Utilice <strong>(Jmeter)</strong></li>
+                <li>Considerar que está publicado y puede recibir miles de hits. Utilice <strong>(Render)</strong></li>
+            </ul>
+        <h2>Análisis de alternativas</h2>
+
+        <div>
+            <img src="https://www.freecodecamp.org/espanol/news/content/images/2021/01/art01im01-2.jpg" width="800px" >           
+        </div>
+
+        <p>En el trabajo real, un buen desarrollador no solo debe saber escribir un buen código, sino tambien <br> 
+            debe saber analizar cuando valga la pena escribirlo por completo o investigar algo ya existente, ya<br>
+         que puede existir un patron existente y/o un open sourse que ya hace lo que queremos hacer nosotros. <br><br>
+         Algunas de las alternativas con las que me encontre fueron las siguientes:
+        </p><br>
+         
+        <li>Algoritmo full-scan complejidad de: O(n) (el mínimo posible en un caso no optimizado ad-hoc).</li>
+         <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*-gRq2YppflBHuPvGkN38QA.gif" width="350px"<br>
+         <li>Algoritmo que busca una cadena de 4 letras por cada posición, escaneando efectivamente cada <br>elemento del array 4 veces en vez de una: O(4*n).</li>
+         <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*H-Mm5JAI_AxahWpRabb9KA.gif" width="350px"<br>
+         <li>Algunas soluciones escanean 4 veces el array completo, una vez buscando AAAA, otra CCCC, otra <br>
+            GGGG y otra TTTT. Sumado a la complejidad anterior sería: O(4*4*n) o sea O(16n).</li>
+         <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*csvfkfr-jNPF3JJqzuBq6g.gif" width="350px"<br><br>
+
+
+         <br><p>Luego de investigar muchos repositorios y analizar proyectos realizados en distintas tecnologías <br> 
+            decidí utilizar la siguiente estructura para detectar mutantes, un <strong>método principal</strong> isMutant que<br>
+            decide si una secuencia de ADN pertenece a un mutante apoyandose en otros métodos que explicare:. </p>
+        <ul>
+            <li><strong>isMutant:</strong> Metodo principal que devuelve un booleano true si el ADN pertenece a un mutante.</li><br>
+            <li><strong>numHorizontalSequences:</strong>Cuenta el numero de matches (estructuras mutantes) de la secuencia<br> de ADN de manera horizontal </li><br>
+            <li><strong>numVerticalSequences:</strong>Cuenta el numero de matches (estructuras mutantes) de la secuencia<br> de ADN de manera vertical </li><br>
+            <li><strong>numContraDiagonalSequences:</strong>Cuenta el numero de matches (estructuras mutantes) de la secuencia<br> de ADN de manera contraria a la diagonal principal</li><br>
+            <li><strong>numDiagonalSequences:</strong>Cuenta el numero de matches (estructuras mutantes) de la secuencia<br> de ADN de manera diagonal</li><br>
+            <li><strong>getContraDiagonal:</strong>Arma la secuencia contradiagonal de ADN a analizar</li><br>
+            <li><strong>getDiagonal:</strong>Arma la secuencia diagonal de ADN a analizar</li><br>
+            <li><strong>saveDNA:</strong> Guarda en la bd H2 la secuencia de ADN si es nueva.</li><br>
+            <li><strong>DNAChequer:</strong> Verifica que la secuencia de ADN sea NxN, que solo tenga las letras en mayuscula y que<br> no sean diferentes de ATCG .</li><br>
+            <li><strong>update DNA:</strong> Actualiza la secuencia de ADN incrementando el valor en uno si la secuancia de ADN ya <br>fue consultada.</li><br>
+            <li><strong>dnaSequenceExists:</strong>Busca en la BD si al secuencia de ADN ya fue ingresada</li><br>
+
+            el codigo se ejecuta rapido incluso con matrices grandes de 100x100
+        </ul><br><br>
+        <p>El recorrido de los métodos <strong>numHorizontalSequences</strong>, <strong>numVerticalSequences</strong>, <strong>numDiagonalSequences</strong><br>
+              y <strong>numContraDiagonalSequences</strong> en el código se ejecuta uno tras otro, de manera secuencial, y no de <br>
+             manera simultánea, ejecutandose en el orden anteriormente mencionado.<br> <br> 
+            Esto es así ya que los métodos están encadenados dentro de un bloque if, y solo si no se  ha encontrado<br>
+             una cantidad suficiente de secuencias mutantes en el flujo actual, el flujo continua por el siguiente, depen_ <br>
+             diendo asi cada uno del resultado del anterior.<br></p><br>
+             <p>Podria haber hecho que estos métodos se ejecuten simultáneamente utilizando programación asíncrona <br>
+            o paralelismo con herramientas como CompletableFuture, ParallelFlux (de Reactor) o mediante un pool<br>
+             de hilos (threads). Pero me parecío suficientemente con el rendimiento que bridaba la API.<br><br>
+            
+            </p><br>
+        <div>       
+             <div class="references">
+               <h2>Conclusiones</h2>
+
+               <p>No entraré en más detalles sobre el proyecto ya que esta página solo aborda el método para<br>
+                encontrar mutantes, toda la documentación del proyecto se encuentra en el READMI del repositorio <br>
+                en cuetion que dejaré a continuación.
+               </p>
+
+            </div>
+        </div>
+
+    <div class="socialMedia">
+       <a href="https://github.com/TheBestDeveloper95/Examen-Parcial-Mercadolibre" target="_blank"> <br><br>
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Instagram" style="width: 40px; height: 40px;">
+        </a>
+       
+        <a href="https://www.instagram.com/renzo__ortiz/?next=%2F" target="_blank"> <br>
+            <img src="https://w7.pngwing.com/pngs/722/1011/png-transparent-logo-icon-instagram-logo-instagram-logo-purple-violet-text-thumbnail.png" alt="Instagram" style="width: 40px; height: 40px;">
+        </a>
+    </div>
+</body>
+</html>
