@@ -189,6 +189,8 @@
             <li><strong>dnaSequenceExists:</strong>Busca en la BD si al secuencia de ADN ya fue ingresada</li><br>
 
             el codigo se ejecuta rapido incluso con matrices grandes de 100x100
+
+        
         </ul><br><br>
         <p>El recorrido de los métodos <strong>numHorizontalSequences</strong>, <strong>numVerticalSequences</strong>, <strong>numDiagonalSequences</strong><br>
               y <strong>numContraDiagonalSequences</strong> en el código se ejecuta uno tras otro, de manera secuencial, y no de <br>
@@ -198,8 +200,12 @@
              diendo asi cada uno del resultado del anterior.<br></p><br>
              <p>Podria haber hecho que estos métodos se ejecuten simultáneamente utilizando programación asíncrona <br>
             o paralelismo con herramientas como CompletableFuture, ParallelFlux (de Reactor) o mediante un pool<br>
-             de hilos (threads). Pero me parecío suficientemente con el rendimiento que bridaba la API.<br><br>
-            
+             de hilos (threads). Pero me parecío suficientemente con el rendimiento que brindaba la API.<br><br>
+            Para terminar y volviendo al tema de la complejidad el algoritmo al realizar una serie de búsquedas de <br>
+            secuencias mutantes en distintas orientaciones (horizontal, vertical, diagonal, contra-diagonal), y cada <br>
+            una tener un nivel de complejidad cuadrática de O(n^2). El método principal que se apoya en en estos métodos<br>
+            también tiene un nivel de complejidad de O(n^2), ya la ejecucion de cada uno depende del método anterior como se <br>
+            explico más arriba. Entonces si uno de los métodos encuentra una secuencia mutante no activa el metodo que le sigue.
             </p><br>
         <div>       
              <div class="references">
