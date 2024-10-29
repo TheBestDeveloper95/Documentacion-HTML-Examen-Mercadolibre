@@ -174,7 +174,7 @@
 
          <br><p>Luego de investigar muchos repositorios y analizar proyectos realizados en distintas tecnologías <br> 
             decidí utilizar la siguiente estructura para detectar mutantes, un <strong>método principal</strong> isMutant que<br>
-            decide si una secuencia de ADN pertenece a un mutante apoyandose en otros métodos que explicare:. </p>
+            decide si una secuencia de ADN pertenece a un mutante apoyandose en otros métodos que explicare: </p>
         <ul>
             <li><strong>isMutant:</strong> Metodo principal que devuelve un booleano true si el ADN pertenece a un mutante.</li><br>
             <li><strong>numHorizontalSequences:</strong>Cuenta el numero de matches (estructuras mutantes) de la secuencia<br> de ADN de manera horizontal </li><br>
@@ -201,12 +201,24 @@
              <p>Podria haber hecho que estos métodos se ejecuten simultáneamente utilizando programación asíncrona <br>
             o paralelismo con herramientas como CompletableFuture, ParallelFlux (de Reactor) o mediante un pool<br>
              de hilos (threads). Pero me parecío suficientemente con el rendimiento que brindaba la API.<br><br>
-            Para terminar y volviendo al tema de la complejidad el algoritmo al realizar una serie de búsquedas de <br>
+             <h2>Complejidad Temporal</h2>
+
+             <p>Para terminar y volviendo al tema de la complejidad el algoritmo al realizar una serie de búsquedas de <br>
             secuencias mutantes en distintas orientaciones (horizontal, vertical, diagonal, contra-diagonal), y cada <br>
             una tener un nivel de complejidad cuadrática de O(n^2). El método principal que se apoya en en estos métodos<br>
-            también tiene un nivel de complejidad de O(n^2), ya la ejecucion de cada uno depende del método anterior como se <br>
+            también tiene un nivel de complejidad de O(n^2), ya la ejecucion de cada uno depende del método anterior como se 
             explico más arriba. Entonces si uno de los métodos encuentra una secuencia mutante no activa el metodo que le sigue.
-            </p><br>
+        </p>
+            <div>       
+                <div class="references">
+                  <h2>Referencias</h2>
+                  <p><a href="https://medium.com/@elbrunorey/mi-experiencia-con-el-desafío-de-mercadolibre-3f7b4ec6493" target="_blank">https://medium.com/@elbrunorey/mi-experiencia-con-el-desafío-de-mercadolibre</a></p>
+                  <p><a href="https://www.datacamp.com/es/tutorial/big-o-notation-time-complexity" target="_blank">https://www.datacamp.com/es/tutorial/big-o-notation-time-complexity</a></p>
+                  <p><a href="https://github.com" target="_blank">https://github.com</a></p>
+                </div>
+           </div>
+            
+        </p>
         <div>       
              <div class="references">
                <h2>Conclusiones</h2>
